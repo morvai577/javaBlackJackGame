@@ -3,8 +3,16 @@ package javaBlackJackGame;
 public class Blackjack {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// Welcome Message
+        System.out.println("Welcome to Blackjack!");
+        
+        // Create playing deck
+        Deck playingDeck = new Deck();
+        playingDeck.createFullDeck();
 
+        System.out.println(playingDeck);
+		
 	}
 
 }
