@@ -82,6 +82,11 @@ public class Deck {
     		comingFrom.removeCard(0);
     }
     
+    // Return size of deck
+    public int deckSize() {
+    		return this.cardsValue();
+    }
+    
     // Return total value of cards in deck
     public int cardsValue() {
     		int totalValue = 0;
@@ -106,6 +111,18 @@ public class Deck {
     			
     			}
     		}
+    		
+    		for (int i = 0; i < aces; i++) {
+    			
+    			if (totalValue > 10) {
+    				totalValue += 1;
+    			}
+    			else {
+    				totalValue += 11;
+    			}
+    		}
+    		
+    		return totalValue;
     }
     
 }
