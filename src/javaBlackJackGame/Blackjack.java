@@ -49,6 +49,7 @@ public class Blackjack {
         		while(true) {
         			System.out.println("Your hand:");
         			System.out.println(playerDeck.toString());
+        			System.out.println();
         			System.out.println("Your hand is valued at: " + playerDeck.cardsValue());
         			
         			// Display Dealer Hand
@@ -116,8 +117,17 @@ public class Blackjack {
         			endRound = true;
         		}
         		
-        
-
+        		else if (endRound == false) {
+        			System.out.println("You lose the hand.");
+        			playerMoney -= playerBet;
+        			endRound = true;
+        		}
+        		
+        		playerDeck.moveAllToDeck(playingDeck);
+        		dealerDeck.moveAllToDeck(playingDeck);
+        		
+        		System.out.println("End of hand!");
+        		
         }
         
         System.out.println("Game over! You are out of money. :(");
